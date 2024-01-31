@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".Write_post">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/action_bar"/>
+
+
+    <EditText
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Heading..."
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#6E6969"
+        android:textSize="22sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:background="#ffffff"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="20dp">
+
+    <ImageView
+        android:id="@+id/imageSelect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:autofillHints="+ UPLOAD IMAGE"
+        android:contentDescription="@string/upload_book_photo" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:background="#2E3551"
+            android:contentDescription="desc"
+            android:src="@drawable/ic_photo_camera_24dp"
+            app:fabSize="auto" />
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="16dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="Write Content here..."
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#6E6969"
+        android:textSize="19sp">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:text="save"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+</LinearLayout>
